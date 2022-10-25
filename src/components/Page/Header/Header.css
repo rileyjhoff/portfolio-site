@@ -1,0 +1,34 @@
+.Header {
+  --header-height: 30px;
+  @media (min-width: 750px) {
+    --header-height: 50px;
+  }
+
+  position: sticky;
+  top: 0;
+  background: var(--header-color);
+  height: var(--header-height);
+  padding-right: var(--padding);
+
+  display: grid;
+  grid-template-columns: max-content 1fr auto;
+  gap: 20px;
+  align-items: center;
+
+  .NavigationContainer {
+    display: none;
+    justify-self: end;
+  }
+
+  @media (min-width: 750px) {
+    padding-left: var(--padding);
+
+    .MenuContainer {
+      display: none;
+    }
+
+    .NavigationContainer {
+      display: initial;
+    }
+  }
+}
